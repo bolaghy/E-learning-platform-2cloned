@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const salt =10;
 
 
@@ -12,7 +12,7 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        required: [true, "Email is required"],
+        required: [true, "Email is required"], 
         unique: true,
     },
     password: {

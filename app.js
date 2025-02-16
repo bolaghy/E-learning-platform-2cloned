@@ -24,8 +24,8 @@ const start = async ()=> {
         console.log(`server is listening and connected to DB on port http://localhost:${PORT}${api}`) 
 })
     } catch (error) {
-        console.log(error);    
-    }
+        console.log(error);     
+    }   
 }          
 start ();  
 
