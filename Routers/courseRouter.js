@@ -1,6 +1,5 @@
 const router = require('express').Router()
-const authMiddleware = require('../Middleware/authMiddleware')
-const roleMiddleware = require('../Middleware/roleMiddleware')
+const {roleMiddleware, authMiddleware} = require('../Middleware/authMiddleware')
 const {getAllCourses, createCourse, getSingleCourse, updateACourse, deleteACourse} = require('../Controllers/course')
 
 
