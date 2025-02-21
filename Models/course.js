@@ -49,4 +49,6 @@ const courseSchema = new Schema({
         ref: 'User' // Reference to User model (Students)
     }],
 },{timestamps: true})
+
+
 module.exports = mongoose.model('Course', courseSchema)

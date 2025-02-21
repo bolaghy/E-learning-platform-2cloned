@@ -12,21 +12,27 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        required: [true, "Email is required"], 
+        required: true, 
         unique: true,
     },
     password: {
         type: String,
-        required:[true, "password is required"],
-        minlength: [6, "Password must be at least 6 characters"]
+        required: true,   
     },
+    confirmationCode: { 
+        type: String 
+    }, 
+  isConfirmed: { 
+        type: Boolean,         
+        default: false 
+    }, 
     bio: {
         type: String,
         trim: true
     },
     profilePicture: {
         type: String, // URL to profile picture
-        default: "https://example.com/default-profile.png"
+        default: "https://imageimage.com"
     },
     role: {
         type: String,
@@ -48,5 +54,6 @@ userSchema.pre("save", async function (next) {
   userSchema.methods.comparePassword = async function (candidatePassword) {
     return await bcrypt.compare(candidatePassword, this.password);
   };
+
 
 module.exports = mongoose.model("User", userSchema)
