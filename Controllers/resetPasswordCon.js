@@ -21,10 +21,10 @@ const requestPasswordReset = async (req, res) => {
     await ResetToken.create({
       userId: user._id,
       token: resetToken,
-    });
+    }); 
  
     // Send the reset email
-    const resetLink = `http://localhost:3000/reset-password?token=${resetToken}`;
+    const resetLink = `http://localhost:5000/api/v1/reset-password?token=${resetToken}`;
     await sendPasswordResetEmail(email, resetLink, resetToken);
 
     res.status(200).json({

@@ -1,5 +1,21 @@
-﻿# E-Learning-backend
+﻿# E-Learning-backend Cloned
+The new implentation added the this code giving role access to instructors and students.
+uploading of image
+Adding welcome mail and OTP comfirmation mail.
+Forgot password mail and and receving password reset link through mail.
+Agreegation to sort and filter data
 
+documentation link
+https://documenter.getpostman.com/view/33726253/2sAYXEEdwJ
+ 
+
+
+
+
+
+
+
+# E-Learning-backend
 This is the documentation for E-learning Platform endpoint.
 
 ﻿
